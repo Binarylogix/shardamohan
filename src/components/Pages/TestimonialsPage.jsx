@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaStar } from "react-icons/fa";
-import Banner from "./banner";
+import Banner from "./Banner";
 
 
 const Testimonials = () => {

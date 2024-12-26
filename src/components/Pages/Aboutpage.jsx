@@ -1,7 +1,7 @@
 
 import img from "../../assets/img/about.jpg";
 import React, { memo } from 'react'
-import Banner from "./banner";
+import Banner from "./Banner";
 
 
 const About = () => {
