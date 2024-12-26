@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "../../layouts/Button";
-import Banner from "../Pages/banner";
+import Banner from "../Pages/Banner";
 
 const Contactus = () => {
   return (
