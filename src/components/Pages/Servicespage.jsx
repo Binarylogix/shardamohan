@@ -4,8 +4,12 @@ import { RiMicroscopeLine } from "react-icons/ri";
 import ServicesCard from "../../layouts/ServicesCard";
 import { MdHealthAndSafety } from "react-icons/md";
 import { FaHeartbeat } from "react-icons/fa";
+<<<<<<< HEAD
 import Banner from "./banner";
 
+=======
+import Banner from "./Banner";
+>>>>>>> 9608b116424ff4f73c1c398beab1314cd0253e9f
 const Services = () => {
   const icon1 = (
     <RiMicroscopeLine size={35} className=" text-backgroundColor" />

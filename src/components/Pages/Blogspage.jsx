@@ -7,7 +7,11 @@ import img3 from "../../assets/img/blog3.jpg";
 import img4 from "../../assets/img/blog4.jpg";
 import img5 from "../../assets/img/blog5.jpg";
 import img6 from "../../assets/img/blog6.jpg";
+<<<<<<< HEAD
 import Banner from "./banner";
+=======
+import Banner from "./Banner";
+>>>>>>> 9608b116424ff4f73c1c398beab1314cd0253e9f
 
 const Blogs = () => {
   return (

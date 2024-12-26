@@ -4,7 +4,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
+<<<<<<< HEAD
 import Banner from "./banner";
+=======
+import Banner from "./Banner";
+>>>>>>> 9608b116424ff4f73c1c398beab1314cd0253e9f
 
 const Doctors = () => {
   const data = [

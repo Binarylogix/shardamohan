@@ -1,7 +1,11 @@
 
 import img from "../../assets/img/about.jpg";
 import React, { memo } from 'react'
+<<<<<<< HEAD
 import Banner from "./banner";
+=======
+import Banner from "./Banner";
+>>>>>>> 9608b116424ff4f73c1c398beab1314cd0253e9f
 
 
 const About = () => {
