@@ -81,9 +81,9 @@ const Navbar = () => {
             <Link to="/services" className="hover:text-black transition-all cursor-pointer text-black">
               Services
             </Link>
-            <Link to="/doctors" className="hover:text-black transition-all cursor-pointer text-black">
+            {/* <Link to="/doctors" className="hover:text-black transition-all cursor-pointer text-black">
               Doctors
-            </Link>
+            </Link> */}
             <Link to="/blogs" className="hover:text-black transition-all cursor-pointer text-black">
               Blog
             </Link>

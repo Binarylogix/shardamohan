@@ -9,7 +9,7 @@ import Doctors from "./Doctors";
 import Home from "./Home";
 import Display from "./Display";
 import Contactsection from "./ContactSection";
-
+import Gallery from "./Gallery";
 const Landing = () => {
 
   return (
@@ -29,15 +29,22 @@ const Landing = () => {
 
           {/* Blogs Section */}
           <Blogs/>
-
+          
+        
           {/* Testimonials  Section */}
           <Testimonials/>
 
-          {/* Display Section */}
-          <Display/>
+            {/* Display Section */}
+            <Display/>
+
+
+          {/* Gallery Section */}
+          <Gallery/>
 
           {/* Contact Section */}
           <Contactsection/>
+
+
           
   </>
   );

@@ -13,13 +13,11 @@ const Footer = () => {
                 </Link>
               </div>
           <p className=" text-sm pt-4">
-            Our team of dedicated doctors, each specializing in unique fields
-            such as orthopedics, cardiology, pediatrics, neurology, dermatology,
-            and more.
+          To promote wellness and balance by combining traditional homeopathy with modern expertise, helping individuals achieve lasting health naturally.
           </p>
         </div>
         <div>
-          <h1 className=" font-medium text-xl pb-4 pt-5 md:pt-0">About Us</h1>
+          <h1 className=" font-medium text-xl pb-4 pt-5 md:pt-0">Quik Links</h1>
           <nav className=" flex flex-col gap-2">
             <Link
               to="about"
@@ -28,7 +26,7 @@ const Footer = () => {
               duration={500}
               className=" hover:text-hoverColor transition-all cursor-pointer"
             >
-              About
+              About Us
             </Link>
             <Link
               to="services"
@@ -48,6 +46,15 @@ const Footer = () => {
             >
               Doctors
             </Link>
+            <Link
+              to="doctors"
+              spy={true}
+              smooth={true}
+              duration={500}
+              className=" hover:text-hoverColor transition-all cursor-pointer"
+            >
+            Blogs
+            </Link>
           </nav>
         </div>
         <div>
@@ -60,7 +67,7 @@ const Footer = () => {
               duration={500}
               className=" hover:text-hoverColor transition-all cursor-pointer"
             >
-              Lab Test
+              Chronic Disease Management
             </Link>
             <Link
               to="services"
@@ -69,7 +76,7 @@ const Footer = () => {
               duration={500}
               className=" hover:text-hoverColor transition-all cursor-pointer"
             >
-              Health Check
+            Skin & Hair Care Solutions
             </Link>
             <Link
               to="services"
@@ -78,7 +85,34 @@ const Footer = () => {
               duration={500}
               className=" hover:text-hoverColor transition-all cursor-pointer"
             >
-              Heart Health
+              Allergy & Immunity Boosting
+            </Link>
+            <Link
+              to="services"
+              spy={true}
+              smooth={true}
+              duration={500}
+              className=" hover:text-hoverColor transition-all cursor-pointer"
+            >
+              Pediatric Homeopathy
+            </Link>
+            <Link
+              to="services"
+              spy={true}
+              smooth={true}
+              duration={500}
+              className=" hover:text-hoverColor transition-all cursor-pointer"
+            >
+             Stress & Emotional Well-Being
+            </Link>
+            <Link
+              to="services"
+              spy={true}
+              smooth={true}
+              duration={500}
+              className=" hover:text-hoverColor transition-all cursor-pointer"
+            >
+              Women’s Health Care
             </Link>
           </nav>
         </div>
@@ -86,13 +120,13 @@ const Footer = () => {
           <h1 className=" font-medium text-xl pb-4 pt-5 md:pt-0">Contact Us</h1>
           <nav className=" flex flex-col gap-2">
             <Link to="/" spy={true} smooth={true} duration={500}>
-              123 Elm Street, Suite 456 Springfield, IL 62701 United States
+            G-3, Vikram Appt, 91, Chandralok Colony, Saket, Indore, Madhya Pradesh 452009
             </Link>
-            <Link to="/" spy={true} smooth={true} duration={500}>
+            {/* <Link to="/" spy={true} smooth={true} duration={500}>
               support@care.com
-            </Link>
+            </Link> */}
             <Link to="/" spy={true} smooth={true} duration={500}>
-              +123-456-7890
+              +9198260 56610
             </Link>
           </nav>
         </div>

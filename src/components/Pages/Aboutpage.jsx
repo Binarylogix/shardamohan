@@ -1,40 +1,29 @@
 
 import img from "../../assets/img/about.jpg";
 import React, { memo } from 'react'
-<<<<<<< HEAD
-import Banner from "./banner";
-=======
 import Banner from "./Banner";
->>>>>>> 9608b116424ff4f73c1c398beab1314cd0253e9f
 
 
 const About = () => {
   return (
     <>
-       <Banner tital="About" />
+      <Banner tital="About" />
       <div className="flex flex-col lg:flex-row justify-between items-center lg:px-32 px-5 pt-24 lg:pt-16 gap-5">
-       
-      
+
+
 
         <div className="w-full lg:w-3/4 space-y-4 mt-10">
           <h1 className="text-4xl font-semibold text-center lg:text-start">About Us</h1>
-          <p className="text-justify text-[15px] lg:text-start">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam
-            labore rerum tempore tenetur commodi natus quos itaque voluptatum
-            repudiandae nostrum accusantium vero voluptate aspernatur totam,
-            laboriosam aut, et quae consequatur?
+          <p className=" text-justify lg:text-start ">
+            Welcome to Sharda Mohan Homeopathy Center, your trusted destination for natural and holistic healing. With a commitment to providing gentle and effective treatments, we specialize in addressing a wide range of acute and chronic health conditions through the proven science of homeopathy.
+
+
           </p>
-          <p className="text-justify text-[15px] lg:text-start">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora quia
-            suscipit illum, numquam incidunt nostrum dolor officia doloremque
-            cupiditate, placeat explicabo sed iure atque neque quidem ipsam!
-            Dolor, minus reiciendis.
+          <p className="text-justify lg:text-start">
+            At Sharda Mohan Homeopathy Center, our expert practitioners focus on personalized care, ensuring that every treatment plan is tailored to your unique health needs. Whether you're dealing with allergies, skin disorders, respiratory issues, or stress-related conditions, we offer safe and side-effect-free solutions designed to restore your overall well-being.
           </p>
-          <p className="text-justify text-[15px] lg:text-start">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, illum.
-            Accusantium ab expedita veniam nobis aut, in rerum repellendus!
-            Exercitationem libero recusandae corrupti accusantium reiciendis in
-            placeat illo maxime ea.
+          <p className="text-justify lg:text-start">
+            To promote wellness and balance by combining traditional homeopathy with modern expertise, helping individuals achieve lasting health naturally.
           </p>
         </div>
         <div className="w-full lg:w-3/4 mt-20">
@@ -49,13 +38,14 @@ const About = () => {
             We believe in treating the whole person — mind, body, and spirit. Our expert homeopaths work closely with patients to understand their physical, emotional, and mental health. By creating a personalized treatment plan, we help restore health naturally, without the use of harsh chemicals or side effects.
           </p>
           <div className="bg-backgroundColor text-white p-6 rounded-xl shadow-lg">
-            <h2 className="text-3xl font-semibold text-center mb-4">Why Choose Homeopathy?</h2>
+            <h2 className="text-3xl font-semibold text-center mb-4">Why Choose US?</h2>
             <ul className="list-inside list-disc space-y-2 text-[10x] text-justify lg:text-start">
-              <li>✨ Gentle and non-invasive treatment</li>
-              <li>✨ Works in harmony with the body’s natural healing processes</li>
-              <li>✨ Safe for all ages, including children and pregnant women</li>
-              <li>✨ Customized treatment based on individual needs</li>
-              <li>✨ Helps in preventing future illness by boosting the body’s immunity</li>
+              <li className="flex">✨<h3 className="font-bold">Experienced Practitioners:</h3> Benefit from years of expertise in homeopathic care.</li>
+              <li className="flex">✨<h3 className="font-bold">Comprehensive Treatment:</h3> Address the root cause of your health concerns with customized remedies.</li>
+              <li className="flex">✨<h3 className="font-bold">Natural & Safe:</h3> Enjoy non-invasive, chemical-free solutions for the whole family.</li>
+              <li className="flex">✨<h3 className="font-bold">Patient-Centered Approach:</h3> We listen, understand, and treat with compassion.</li>
+
+
             </ul>
           </div>
 
@@ -77,7 +67,7 @@ const About = () => {
           </div>
 
           <p className="text-[10x] text-justify lg:text-start text-[#381F15] leading-relaxed">
-            If you're seeking an alternative to conventional treatments, homeopathy may be the right choice for you. At <span className="font-bold text-[#6d4c41]">[Your Clinic Name]</span>, we are dedicated to helping you achieve optimal health and wellness in a natural and sustainable way.
+            If you're seeking an alternative to conventional treatments, homeopathy may be the right choice for you. At <span className="font-bold text-[#6d4c41]">Sharda Mohan Homoeopathic Clinic</span>, we are dedicated to helping you achieve optimal health and wellness in a natural and sustainable way.
           </p>
         </div>
       </div>

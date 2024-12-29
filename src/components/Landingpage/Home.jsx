@@ -1,6 +1,6 @@
-<<<<<<< HEAD
 import React from 'react'
 import Button from "../../layouts/Button";
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -10,16 +10,16 @@ const Home = () => {
               {/* Home Section */}
               <div className=" w-full lg:w-3/5 space-y-5   ">
                   <h1 className="text-5xl font-bold leading-tight mt-10 bg-transparent ">
-                  Empowering Health Choices for a Vibrant Life Your Trusted..
+                  Healing You Naturally, One Remedy at a Time..
                   </h1>
                   <p className="bg-transparent">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam magnam
-                  omnis natus accusantium quos. Reprehenderit incidunt expedita
-                  molestiae impedit at sequi dolorem iste sit culpa, optio voluptates
-                  fugiat vero consequatur?
+                  Welcome to Sharda Mohan Homeopathy center! We specialize in holistic health through the power of homeopathy. Visit us for personalized care and natural solutions.
                   </p>
-              
-                  <Button href='/services'  title="See Services"/>
+                  <div className='my-4'>
+                  <Link to="/contact" > 
+                  <Button   title="See Services"/>
+                  </Link>
+                  </div>
            
                  
               </div>
@@ -28,35 +28,4 @@ const Home = () => {
   )
 }
 
-=======
-import React from 'react'
-import Button from "../../layouts/Button";
-
-const Home = () => {
-  return (
-    <div>
-        <div className="min-h-screen flex flex-col justify-center lg:px-32 px-5 text-white bg-[url('assets/ban.png')] bg-no-repeat bg-cover ">
-          <div className="absolute inset-0  "></div>
-              {/* Home Section */}
-              <div className=" w-full lg:w-3/5 space-y-5   ">
-                  <h1 className="text-5xl font-bold leading-tight mt-10 bg-transparent ">
-                  Empowering Health Choices for a Vibrant Life Your Trusted..
-                  </h1>
-                  <p className="bg-transparent">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam magnam
-                  omnis natus accusantium quos. Reprehenderit incidunt expedita
-                  molestiae impedit at sequi dolorem iste sit culpa, optio voluptates
-                  fugiat vero consequatur?
-                  </p>
-              
-                  <Button href='/services'  title="See Services"/>
-           
-                 
-              </div>
-          </div>
-    </div>
-  )
-}
-
->>>>>>> 9608b116424ff4f73c1c398beab1314cd0253e9f
 export default Home
