@@ -56,6 +56,7 @@ import Blogs from "./components/Pages/Blogspage";
 import Footer from "./components/Main/Footer";
 import Testimonialspage from "./components/Pages/TestimonialsPage";
 import Contactus from "./components/Landingpage/Contactus";
+import BlogsDetails from "./components/Pages/BlogDetails";
 
 const App = () => {
   return (
@@ -68,6 +69,7 @@ const App = () => {
           <Route path="/services" element={<Services />} /> {/* Services page */}
           <Route path="/doctors" element={<Doctors />} /> {/* Doctors page */}
           <Route path="/blogs" element={<Blogs />} /> {/* Blogs page */}
+          <Route path="/blogdetails/:id" element={<BlogsDetails />} /> {/* Blog details page */}
           <Route path="/testimonials" element={<Testimonialspage />} /> {/* Testimonials page */}
           <Route path="/contact" element={<Contactus />} /> {/* Contact page */}
         </Routes>

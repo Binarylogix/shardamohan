@@ -1,45 +1,58 @@
 import React from "react";
-import Button from "../../layouts/Button";
-import BlogCard from "../../layouts/BlogCard";
-import img1 from "../../assets/img/blog1.jpg";
-import img2 from "../../assets/img/blog2.jpg";
-import img3 from "../../assets/img/blog3.jpg";
-import img4 from "../../assets/img/blog4.jpg";
-import img5 from "../../assets/img/blog5.jpg";
-import img6 from "../../assets/img/blog6.jpg";
+import { useNavigate } from "react-router-dom";
+import blogsData from "./BlogData";
 import Banner from "./Banner";
+import Button from "../../layouts/Button";
 
 const Blogs = () => {
+  const navigate = useNavigate();
+  const truncateText = (text, wordLimit) => {
+    const words = text.split(" ");
+    if (words.length <= wordLimit) {
+      return text;
+    }
+    return words.slice(0, wordLimit).join(" ") + "...";
+  };
   return (
-  <>
-  <Banner tital="Blog" />
-    <div className="flex flex-col justify-center lg:px-32 px-5 pt-24">
-      <div className="mt-10 flex flex-col items-center lg:flex-row justify-between">
-        <div>
-          <h1 className=" text-4xl font-semibold text-center lg:text-start">
-            Latest Post
-          </h1>
-          <p className=" mt-2 text-center lg:text-start">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus,
-            quidem.
-          </p>
+    <>
+      <Banner tital="Blog"/>
+      <div className="flex flex-col justify-center lg:px-32 px-5 pt-16">
+        <div className="mt-10 flex flex-col items-center lg:flex-row justify-between">
+          <div>
+            <h1 className="text-4xl font-semibold text-center lg:text-start">
+              Latest Blogs
+            </h1>
+            <p className="mt-2 text-center lg:text-start">
+              Here are some blog topics for homeopathic treatments:
+            </p>
+          </div>
+          <div className="mt-4 lg:mt-0">
+            <Button title="Our Articles" />
+          </div>
         </div>
-        <div className=" mt-4 lg:mt-0">
-          <Button title="Our Articles" />
+        <div className="my-8 mb-20">
+          <div className="gap-5 md:gap-10 width-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+            {blogsData.map((blog) => (
+              <div key={blog.id} className="bg-white shadow-lg rounded-lg p-6">
+                <img
+                  src={blog.img}
+                  alt={blog.headline}
+                  className="w-full h-40 object-cover rounded-t-lg"
+                />
+                <h2 className="text-xl font-bold mt-4">{blog.headline}</h2>
+                <p className="text-gray-600 mt-2">     {truncateText(blog.description, 16)}</p>
+                <button
+                  onClick={() => navigate(`/blogdetails/${blog.id}`)}
+                  className="mt-4 py-2 px-3 bg-gradient-to-r from-brightColor to-backgroundColor text-white rounded text-sm "
+                >
+                  Read More
+                </button>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-      <div className="my-8 mb-20">
-        <div className="gap-5 md:gap-10 width-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-          <BlogCard img={img1} headlines="Unraveling the Mysteries of Sleep"/>
-          <BlogCard img={img2} headlines="The Heart-Healthy Diet" />
-          <BlogCard img={img3} headlines="Understanding Pediatric Vaccinations" />
-          <BlogCard img={img4} headlines="Navigating Mental Health" />
-          <BlogCard img={img5} headlines="The Importance of Regular Exercise" />
-          <BlogCard img={img6} headlines="Skin Health 101" />
-        </div>
-      </div>
-    </div>
- </>
+    </>
   );
 };
 
