@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom"; // Import useLocation for 
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 // import Contact from "../../models/Contact"; // Ensure correct import
 import { useNavigate } from 'react-router-dom';
-import logo from '../../assets/SMLogo.png'
+import logo from '../../assets/SMLo.png'
 
 const Navbar = () => {
   
@@ -66,7 +66,7 @@ const Navbar = () => {
         >
           <div className="flex flex-row items-center cursor-pointer">
             <Link to="/" className="text-2xl ">
-              <img src={logo} alt="Sharda Mohan " className="w-32" />
+              <img src={logo} alt="Sharda Mohan " className="w-44" />
             </Link>
           </div>
 
@@ -81,9 +81,9 @@ const Navbar = () => {
             <Link to="/services" className="hover:text-black transition-all cursor-pointer text-black">
               Services
             </Link>
-            {/* <Link to="/doctors" className="hover:text-black transition-all cursor-pointer text-black">
-              Doctors
-            </Link> */}
+            <Link to="/gallery" className="hover:text-black transition-all cursor-pointer text-black">
+              Gallery
+            </Link>
             <Link to="/blogs" className="hover:text-black transition-all cursor-pointer text-black">
               Blog
             </Link>
