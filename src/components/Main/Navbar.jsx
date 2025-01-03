@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom"; // Import useLocation for 
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 // import Contact from "../../models/Contact"; // Ensure correct import
 import { useNavigate } from 'react-router-dom';
-import logo from '../../assets/SMLo.png'
+import logo from '../../assets/SMlo.png'
 
 const Navbar = () => {
   
