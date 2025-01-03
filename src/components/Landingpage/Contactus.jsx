@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../../layouts/Button";
 import Banner from "../Pages/Banner";
+import headImage from "../../assets/head.png";
 
 const Contactus = () => {
   return (
@@ -23,9 +24,14 @@ const Contactus = () => {
 
       {/* Contact Form Section */}
       <div className="w-full lg:w-1/2 max-w-lg space-y-6 bg-white p-6 md:p-10 rounded-lg shadow-lg">
-        <h1 className="text-3xl md:text-4xl font-semibold text-center text-backgroundColor">
-          Contact Us
-        </h1>
+         <div
+                    className="bg-cover bg-center p-8 w-64"
+                    style={{ backgroundImage: `url(${headImage})` }}
+                  >
+                    <h1 className="text-4xl font-semibold text-center lg:text-start ">
+                      Contact Us
+                    </h1>
+                  </div>
 
         <div className="flex flex-col">
           <input

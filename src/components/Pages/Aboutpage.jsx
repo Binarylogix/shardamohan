@@ -1,10 +1,76 @@
 
 import img from "../../assets/img/about.jpg";
-import React, { memo } from 'react'
+import React, { useRef,memo } from 'react'
 import Banner from "./Banner";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { FaStar } from "react-icons/fa";
 
 
 const About = () => {
+
+  const data = [
+    {
+      img: "/src/assets/certificate/1.jpeg",
+    },
+    {
+      img: "/src/assets/certificate/2.jpeg",
+    },
+    {
+      img: "/src/assets/certificate/3.jpeg",
+    },
+    {
+      img: "/src/assets/certificate/4.jpeg",
+    },
+    {
+      img: "/src/assets/certificate/5.jpeg",
+    },
+    
+];
+
+const slider = useRef(null);
+
+const settings = {
+accessibility: true,
+dots: true,
+infinite: true,
+speed: 500,
+arrows: false,
+slidesToShow: 3,
+slidesToScroll: 1,
+autoplay: true,
+autoplaySpeed: 2000,
+responsive: [
+  {
+    breakpoint: 1023,
+    settings: {
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      infinite: true,
+      dots: true,
+    },
+  },
+  {
+    breakpoint: 768,
+    settings: {
+      slidesToShow: 2,
+      slidesToScroll: 2,
+      initialSlide: 2,
+    },
+  },
+  {
+    breakpoint: 480,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      initialSlide: 2,
+    },
+  },
+],
+};
+
+
   return (
     <>
       <Banner tital="About" />
@@ -71,6 +137,42 @@ const About = () => {
           </p>
         </div>
       </div>
+
+
+    {/* certigicate sections  */}
+
+
+    <div className="flex flex-col justify-center lg:px-32 px-5 pt-16 bg-[url('assets/img/bgtestimonial.png')] bg-no-repeat bg-cover bg-white">
+    <div className="flex flex-col items-center lg:flex-row justify-between mb-10 lg:mb-0">
+      <div>
+        <h1 className="text-4xl font-semibold text-center lg:text-start">
+          Our Achievement
+        </h1>
+      
+      </div>
+    </div>
+    <div className="mt-5 mb-20">
+      <Slider ref={slider} {...settings}>
+        {data.map((item, index) => (
+          <div
+            className=" text-black bg-white rounded-xl shadow-lg p-1 flex flex-col justify-between"
+            key={index}
+          >
+            <div className="flex flex-col gap-10 items-center">
+              <img
+                src={item.img}
+                alt="User"
+                className=" rounded-md object-cover"
+              />
+             
+            </div>
+           
+          </div>
+        ))}
+      </Slider>
+    </div>
+  </div>
+
     </>
   );
 };

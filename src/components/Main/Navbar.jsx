@@ -60,8 +60,8 @@ const Navbar = () => {
             location.pathname === "/" // Check if we're on the home page
               ? isScrolled
                 ? "bg-white shadow-lg fixed top-0 left-0 w-full z-20"
-                : "bg-transparent"
-              : "bg-white" // Always solid background for non-home pages
+                : "bg-transparent "
+              : "bg-white shadow-lg" // Always solid background for non-home pages
           }`}
         >
           <div className="flex flex-row items-center cursor-pointer">

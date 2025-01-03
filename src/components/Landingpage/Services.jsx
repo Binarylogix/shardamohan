@@ -8,6 +8,7 @@ import { FaHeartbeat } from "react-icons/fa";
 import { RiWomenFill } from "react-icons/ri";
 import { FaDisease } from "react-icons/fa";
 import { GiDistressSignal } from "react-icons/gi";
+import headImage from "../../assets/head.png";
 
 
 const Services = () => {
@@ -29,9 +30,14 @@ const Services = () => {
       <div className="  flex flex-col justify-center lg:px-32 px-5 pt-16 lg:pt-18">
         <div className=" flex flex-col items-center lg:flex-row justify-between">
           <div>
-            <h1 className=" text-4xl font-semibold text-center lg:text-start">
-              Our Services
-            </h1>
+             <div
+                        className="bg-cover bg-center p-8 w-80"
+                        style={{ backgroundImage: `url(${headImage})` }}
+                      >
+                        <h1 className="text-4xl font-semibold text-center lg:text-start ">
+                          Our Service
+                        </h1>
+                      </div>
             <p className=" mt-2 text-center lg:text-start">
               Here are six main services that can be highlighted for Sharda Mohan Homeopathy Center:
             </p>

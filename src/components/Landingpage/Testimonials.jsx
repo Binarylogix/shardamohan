@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaStar } from "react-icons/fa";
+import headImage from "../../assets/head.png";
 
 
 const Testimonials = () => {
@@ -94,9 +95,14 @@ const Testimonials = () => {
     <div className="flex flex-col justify-center lg:px-32 px-5 pt-16 bg-[url('assets/img/bgtestimonial.png')] bg-no-repeat bg-cover bg-white">
     <div className="flex flex-col items-center lg:flex-row justify-between mb-10 lg:mb-0">
       <div>
-        <h1 className="text-4xl font-semibold text-center lg:text-start">
-          Testimonials
-        </h1>
+       <div
+                  className="bg-cover bg-center p-8 w-64"
+                  style={{ backgroundImage: `url(${headImage})` }}
+                >
+                  <h1 className="text-4xl font-semibold text-center lg:text-start ">
+                     Testimonial
+                  </h1>
+                </div>
         <p className="mt-2 text-center lg:text-start text-gray-500">
           Hear what our clients have to say about their experiences with us.
         </p>
