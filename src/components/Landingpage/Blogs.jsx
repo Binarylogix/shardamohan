@@ -15,18 +15,18 @@ const Blogs = () => {
   };
   return (
     <>
-   
+
       <div className="flex flex-col justify-center lg:px-32 px-5 pt-24">
         <div className="mt-10 flex flex-col items-center lg:flex-row justify-between">
           <div>
             <div
-                       className="bg-cover bg-center p-8 w-80"
-                       style={{ backgroundImage: `url(${headImage})` }}
-                     >
-                       <h1 className="text-4xl font-semibold text-center lg:text-start ">
-                        Latest Blogs
-                       </h1>
-                     </div>
+              className="bg-cover bg-center p-8 w-80"
+              style={{ backgroundImage: `url(${headImage})` }}
+            >
+              <h1 className="text-4xl font-semibold text-center lg:text-start ">
+                Latest Blogs
+              </h1>
+            </div>
             <p className="mt-2 text-center lg:text-start">
               Here are some blog topics for homeopathic treatments:
             </p>

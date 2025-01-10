@@ -31,12 +31,12 @@ const Landing = () => {
           <Blogs/>
           
         
-          {/* Testimonials  Section */}
-          <Testimonials/>
-
             {/* Display Section */}
             <Display/>
 
+         
+          {/* Testimonials Section */}  
+          <Testimonials/>
 
           {/* Gallery Section */}
           <Gallery/>
