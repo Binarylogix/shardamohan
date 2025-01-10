@@ -20,7 +20,7 @@ const Footer = () => {
           <h1 className=" font-medium text-xl pb-4 pt-5 md:pt-0">Quik Links</h1>
           <nav className=" flex flex-col gap-2">
             <Link
-              to="about"
+              to="/about"
               spy={true}
               smooth={true}
               duration={500}
@@ -29,7 +29,7 @@ const Footer = () => {
               About Us
             </Link>
             <Link
-              to="services"
+              to="/services"
               spy={true}
               smooth={true}
               duration={500}
@@ -38,16 +38,16 @@ const Footer = () => {
               Services
             </Link>
             <Link
-              to="doctors"
+              to="gallery"
               spy={true}
               smooth={true}
               duration={500}
               className=" hover:text-hoverColor transition-all cursor-pointer"
             >
-              Doctors
+              Gallery
             </Link>
             <Link
-              to="doctors"
+              to="/blogs"
               spy={true}
               smooth={true}
               duration={500}
@@ -61,7 +61,7 @@ const Footer = () => {
           <h1 className=" font-medium text-xl pb-4 pt-5 md:pt-0">Services</h1>
           <nav className=" flex flex-col gap-2">
             <Link
-              to="services"
+              to="/services"
               spy={true}
               smooth={true}
               duration={500}
@@ -70,7 +70,7 @@ const Footer = () => {
               Chronic Disease Management
             </Link>
             <Link
-              to="services"
+              to="/services"
               spy={true}
               smooth={true}
               duration={500}
@@ -79,7 +79,7 @@ const Footer = () => {
             Skin & Hair Care Solutions
             </Link>
             <Link
-              to="services"
+              to="/services"
               spy={true}
               smooth={true}
               duration={500}
@@ -88,7 +88,7 @@ const Footer = () => {
               Allergy & Immunity Boosting
             </Link>
             <Link
-              to="services"
+              to="/services"
               spy={true}
               smooth={true}
               duration={500}
@@ -97,7 +97,7 @@ const Footer = () => {
               Pediatric Homeopathy
             </Link>
             <Link
-              to="services"
+              to="/services"
               spy={true}
               smooth={true}
               duration={500}
@@ -106,7 +106,7 @@ const Footer = () => {
              Stress & Emotional Well-Being
             </Link>
             <Link
-              to="services"
+              to="/services"
               spy={true}
               smooth={true}
               duration={500}

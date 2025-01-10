@@ -10,7 +10,7 @@ import headImage from '../../assets/head.png';
 const Gallery = () => {
   return (
     <>
-      <div className="items-center px-5 pt-16 lg:px-32 lg:pt-6">
+      <div className="items-center px-4 pt-16 lg:px-28 lg:pt-6">
         <div
                    className="bg-cover bg-center p-8 w-64"
                    style={{ backgroundImage: `url(${headImage})` }}

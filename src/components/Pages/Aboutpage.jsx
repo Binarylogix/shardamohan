@@ -74,30 +74,28 @@ responsive: [
   return (
     <>
       <Banner tital="About" />
-      <div className="flex flex-col lg:flex-row justify-between items-center lg:px-32 px-5 pt-24 lg:pt-16 gap-5">
+      <div className="flex flex-col lg:flex-row justify-between items-center lg:px-24 px-5 pt-16 lg:pt-10 gap-5">
 
 
 
-        <div className="w-full lg:w-3/4 space-y-4 mt-10">
+        <div className="w-full lg:w-3/4 space-y-4 ">
           <h1 className="text-4xl font-semibold text-center lg:text-start">About Us</h1>
           <p className=" text-justify lg:text-start ">
-            Welcome to Sharda Mohan Homeopathy Center, your trusted destination for natural and holistic healing. With a commitment to providing gentle and effective treatments, we specialize in addressing a wide range of acute and chronic health conditions through the proven science of homeopathy.
-
-
+          Welcome to Sharda Mohan Homeopathy Clinic, where holistic healing meets compassionate care. Our clinic is dedicated to providing safe, personalized, and effective treatments that focus on healing from within. We understand that every individual is unique, which is why we offer tailored remedies that address the root causes of illness, promoting long-term wellness and vitality.
           </p>
           <p className="text-justify lg:text-start">
-            At Sharda Mohan Homeopathy Center, our expert practitioners focus on personalized care, ensuring that every treatment plan is tailored to your unique health needs. Whether you're dealing with allergies, skin disorders, respiratory issues, or stress-related conditions, we offer safe and side-effect-free solutions designed to restore your overall well-being.
+          With years of experience in treating a wide range of conditions, from chronic illnesses to everyday ailments, our expert homeopaths use natural, gentle remedies to restore balance and improve quality of life. Whether you're seeking relief from stress, digestive issues, allergies, or skin concerns, we are here to guide you on your healing journey.
           </p>
           <p className="text-justify lg:text-start">
-            To promote wellness and balance by combining traditional homeopathy with modern expertise, helping individuals achieve lasting health naturally.
+          At Sharda Mohan Homeopathy Clinic, we emphasize a holistic approach that nurtures the body, mind, and spirit. We believe in empowering our patients to make informed decisions about their health and provide unwavering support at every step of the way.Your well-being is our priority, and we are committed to helping you achieve lasting health and happiness. Trust in nature, trust in us. Let us help you discover the healing power of homeopathy.
           </p>
         </div>
-        <div className="w-full lg:w-3/4 mt-20">
+        <div className="w-full lg:w-3/4 mt-20 ">
           <img className="rounded-lg w-full" src={img} alt="img" />
         </div>
       </div>
 
-      <div className=" flex flex-col lg:flex-row justify-between items-center lg:px-32 px-5 gap-5 my-20">
+      <div className=" flex flex-col lg:flex-row justify-between items-center lg:px-24 px-5 gap-5 my-20">
         <div className="w-full lg:w-3/4 space-y-4">
           <h2 className="text-3xl font-semibold text-[#381F15] mb-4">Our Approach to Healing</h2>
           <p className="text-[10x] text-justify :text-start text-[#381F15] leading-relaxed">
@@ -142,7 +140,7 @@ responsive: [
     {/* certigicate sections  */}
 
 
-    <div className="flex flex-col justify-center lg:px-32 px-5 pt-16 bg-[url('assets/img/bgtestimonial.png')] bg-no-repeat bg-cover bg-white">
+    <div className="flex flex-col justify-center lg:px-24 px-5 pt-16 bg-[url('assets/img/bgtestimonial.png')] bg-no-repeat bg-cover bg-white">
     <div className="flex flex-col items-center lg:flex-row justify-between mb-10 lg:mb-0">
       <div>
         <h1 className="text-4xl font-semibold text-center lg:text-start">

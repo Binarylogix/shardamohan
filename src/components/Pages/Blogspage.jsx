@@ -16,8 +16,8 @@ const Blogs = () => {
   return (
     <>
       <Banner tital="Blog"/>
-      <div className="flex flex-col justify-center lg:px-32 px-5 pt-16">
-        <div className="mt-10 flex flex-col items-center lg:flex-row justify-between">
+      <div className="flex flex-col justify-center lg:px-24 px-5 pt-10">
+        <div className="mt-4 flex flex-col items-center lg:flex-row justify-between">
           <div>
             <h1 className="text-4xl font-semibold text-center lg:text-start">
               Latest Blogs

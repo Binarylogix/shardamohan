@@ -2,6 +2,7 @@ import React from 'react';
 import { FaLocationCrosshairs } from "react-icons/fa6";
 import { BiSolidMegaphone } from "react-icons/bi";
 import { MdOutlineAvTimer } from "react-icons/md";
+import img1 from "../../assets/img/bac.png";
 
 
 
@@ -10,7 +11,7 @@ const ContactSection = () => {
     <div className="flex flex-wrap p-6 md:p-20 items-center shadow-lg  rounded-lg justify-center">
       <div className="flex flex-col md:flex-row  rounded-tl-lg rounded-tr-lg w-full">
         {/* Map Section */}
-        <div className="flex-1 w-full p-2 md:p-4">
+        <div className="flex-1 w-full">
         <div className='bg-white p-4 rounded-lg shadow-lg'>
           <iframe
             src="https://www.google.com/maps/embed?pb=..."
@@ -25,7 +26,7 @@ const ContactSection = () => {
         </div>
 
         {/* Contact Form Section */}
-        <div className="flex-1 w-full p-2 md:p-4"> 
+        <div className="flex-1 w-full "> 
           <div className='bg-white p-6 rounded-lg shadow-lg'>
           <h2 className="text-2xl font-semibold mb-4 text-center md:text-left">
             Contact Us
@@ -91,9 +92,9 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row  gap-10 p-10 shadow-lg rounded-lg w-full">
+      <div className="flex flex-col md:flex-row  gap-10 p-6 shadow-lg rounded-lg w-full">
         {/* Address Section */}
-        <div className="flex-1 w-full p-4 md:p-10 bg-green-100  shadow-lg rounded-lg ">
+        <div className="flex-1 w-full p-4 md:p-8 bg-cover bg-center shadow-lg rounded-lg " style={{ backgroundImage: `url(${img1})` }}>
           <h2 className="text-2xl font-semibold mb-4 text-center md:text-left">
             Address
           </h2>
@@ -116,13 +117,8 @@ const ContactSection = () => {
           </div>
         </div>
 
-      
-
-
-
-
         {/* get in touch Section */}
-        <div className="flex-1 w-full p-4 md:p-10 bg-green-100 shadow-lg rounded-lg">
+        <div className="flex-1 w-full p-4 md:p-8 shadow-lg rounded-lg bg-cover bg-center" style={{ backgroundImage: `url(${img1})` }}>
           <h2 className="text-2xl font-semibold mb-4 text-center md:text-left">
             Get In Touch
           </h2>
@@ -144,9 +140,8 @@ const ContactSection = () => {
 
         </div>
 
-
         {/* working hours Section */}
-        <div className="flex-1 w-full p-4 md:p-10 bg-green-100 shadow-lg rounded-lg">
+        <div className="flex-1 w-full p-4 md:p-8 bg-green-100 shadow-lg rounded-lg bg-cover bg-center" style={{ backgroundImage: `url(${img1})` }}>
           <h2 className="text-2xl font-semibold mb-4 text-center md:text-left">
             Working Hours
           </h2>

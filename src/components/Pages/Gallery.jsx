@@ -23,9 +23,8 @@ const Gallery = () => {
   return (
     <>
      <Banner tital="Galley" />
-     <div className="flex flex-col lg:flex-row justify-between items-center lg:px-32 px-5 pt-28 lg:pt-16 gap-5" />
-    <div className="p-10">
-      <h1 className="text-4xl font-bold  mb-5 text-gray-800">Gallery</h1>
+     <div className="flex flex-col lg:flex-row justify-between items-center lg:px-32 px-5 pt-16 lg:pt-16 gap-5" />
+    <div className="px-10 pb-10">
       <p className=" mb-8 text-gray-600">
         Discover our beautifully curated gallery.
       </p>
