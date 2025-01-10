@@ -1,11 +1,12 @@
 
-import img from "../../assets/img/about.jpg";
-import React, { useRef,memo } from 'react'
+import React, { useRef, memo } from 'react'
 import Banner from "./Banner";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { FaStar } from "react-icons/fa";
+import img from "../../assets/img/about.jpg";
+import drparul from "../../assets/gallery/drparul.jpeg";
+
 
 
 const About = () => {
@@ -26,72 +27,86 @@ const About = () => {
     {
       img: "/src/assets/certificate/5.jpeg",
     },
-    
-];
 
-const slider = useRef(null);
+  ];
 
-const settings = {
-accessibility: true,
-dots: true,
-infinite: true,
-speed: 500,
-arrows: false,
-slidesToShow: 3,
-slidesToScroll: 1,
-autoplay: true,
-autoplaySpeed: 2000,
-responsive: [
-  {
-    breakpoint: 1023,
-    settings: {
-      slidesToShow: 3,
-      slidesToScroll: 3,
-      infinite: true,
-      dots: true,
-    },
-  },
-  {
-    breakpoint: 768,
-    settings: {
-      slidesToShow: 2,
-      slidesToScroll: 2,
-      initialSlide: 2,
-    },
-  },
-  {
-    breakpoint: 480,
-    settings: {
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      initialSlide: 2,
-    },
-  },
-],
-};
+  const slider = useRef(null);
+
+  const settings = {
+    accessibility: true,
+    dots: true,
+    infinite: true,
+    speed: 500,
+    arrows: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 1023,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 2,
+        },
+      },
+    ],
+  };
 
 
   return (
     <>
       <Banner tital="About" />
-      <div className="flex flex-col lg:flex-row justify-between items-center lg:px-24 px-5 pt-16 lg:pt-10 gap-5">
-
-
-
-        <div className="w-full lg:w-3/4 space-y-4 ">
-          <h1 className="text-4xl font-semibold text-center lg:text-start">About Us</h1>
-          <p className=" text-justify lg:text-start ">
-          Welcome to Sharda Mohan Homeopathy Clinic, where holistic healing meets compassionate care. Our clinic is dedicated to providing safe, personalized, and effective treatments that focus on healing from within. We understand that every individual is unique, which is why we offer tailored remedies that address the root causes of illness, promoting long-term wellness and vitality.
-          </p>
-          <p className="text-justify lg:text-start">
-          With years of experience in treating a wide range of conditions, from chronic illnesses to everyday ailments, our expert homeopaths use natural, gentle remedies to restore balance and improve quality of life. Whether you're seeking relief from stress, digestive issues, allergies, or skin concerns, we are here to guide you on your healing journey.
-          </p>
-          <p className="text-justify lg:text-start">
-          At Sharda Mohan Homeopathy Clinic, we emphasize a holistic approach that nurtures the body, mind, and spirit. We believe in empowering our patients to make informed decisions about their health and provide unwavering support at every step of the way.Your well-being is our priority, and we are committed to helping you achieve lasting health and happiness. Trust in nature, trust in us. Let us help you discover the healing power of homeopathy.
-          </p>
+      <div className=" justify-between items-center lg:px-24 px-5 pt-16 lg:pt-10 gap-5">
+        <div className="mt-20 gap-20 flex flex-col lg:flex-row ">
+          <div className="w-full lg:w-3/4 space-y-4 py-20 ">
+            <h1 className="text-4xl font-semibold text-center lg:text-start">About <span className="text-green-600">Dr. Parul Agrawal</span></h1>
+            <p className="text-justify lg:text-start ">
+              Homeopathy is the most trusted natural form of medicine that till date is being used by millions of people worldwide. Homeopathy runs on the objective that "the body can cure itself," and with this particular idea, Dr.Parul Agrawal, an eminent homeopath started ShardaMohan Clinic a dedicated homeopathy clinic where every patient is treated with utmost precision and care with sympathy.
+            </p>
+            <p className="text-justify lg:text-start ">
+            I found this ShardaMohan Clinic that treats its patients with the utmost care and personalized homeopathic treatments and shall have a great impact on their health and lives As they say, Fortune favors the brave, I feel very fortunate to say that I have a solid association of expert homeopathy doctors and dedicated support that had supported me and my vision.
+            </p>
+          </div>
+          <div className="w-full lg:w-2/4">
+            <img className="rounded-lg w-full h-[500px]" src={drparul} alt="img" />
+          </div>
         </div>
-        <div className="w-full lg:w-3/4 mt-20 ">
-          <img className="rounded-lg w-full" src={img} alt="img" />
+        <div className="mt-20 gap-10 flex flex-col lg:flex-row">
+         
+          <div className="w-full lg:w-3/4">
+            <img className="rounded-lg w-full" src={img} alt="img" />
+          </div>
+          <div className="w-full lg:w-3/4 space-y-4 ">
+            <h1 className="text-4xl font-semibold text-center lg:text-start">About <span className="text-green-600">Sharda Mohan Homoeopathic Clinic </span></h1>
+            <p className=" text-justify lg:text-start ">
+              Welcome to Sharda Mohan Homeopathy Clinic, where holistic healing meets compassionate care. Our clinic is dedicated to providing safe, personalized, and effective treatments that focus on healing from within. We understand that every individual is unique, which is why we offer tailored remedies that address the root causes of illness, promoting long-term wellness and vitality.
+            </p>
+            <p className="text-justify lg:text-start ">
+              Homeopathy is the most trusted natural form of medicine that till date is being used by millions of people worldwide. Homeopathy runs on the objective that "the body can cure itself," and with this particular idea, Dr.Parul Agrawal, an eminent homeopath started ShardaMohan Clinic a dedicated homeopathy clinic where every patient is treated with utmost precision and care with sympathy.
+            </p>
+            <p className="text-justify lg:text-start ">
+              ShardaMohan Clinic comes forward with a holistic approach to treat patients with personalized Constitutional Homeopathic Treatment that serves to be far better than the conventional treatments. It consists of well experienced Homeopathic doctor Parul Agrawal who happen to be experts in her field.
+            </p>
+          </div>
         </div>
       </div>
 
@@ -137,39 +152,39 @@ responsive: [
       </div>
 
 
-    {/* certigicate sections  */}
+      {/* certigicate sections  */}
 
 
-    <div className="flex flex-col justify-center lg:px-24 px-5 pt-16 bg-[url('assets/img/bgtestimonial.png')] bg-no-repeat bg-cover bg-white">
-    <div className="flex flex-col items-center lg:flex-row justify-between mb-10 lg:mb-0">
-      <div>
-        <h1 className="text-4xl font-semibold text-center lg:text-start">
-          Our Achievement
-        </h1>
-      
-      </div>
-    </div>
-    <div className="mt-5 mb-20">
-      <Slider ref={slider} {...settings}>
-        {data.map((item, index) => (
-          <div
-            className=" text-black bg-white rounded-xl shadow-lg p-1 flex flex-col justify-between"
-            key={index}
-          >
-            <div className="flex flex-col gap-10 items-center">
-              <img
-                src={item.img}
-                alt="User"
-                className=" rounded-md object-cover"
-              />
-             
-            </div>
-           
+      <div className="flex flex-col justify-center lg:px-24 px-5 pt-16 bg-[url('assets/img/bgtestimonial.png')] bg-no-repeat bg-cover bg-white">
+        <div className="flex flex-col items-center lg:flex-row justify-between mb-10 lg:mb-0">
+          <div>
+            <h1 className="text-4xl font-semibold text-center lg:text-start">
+              Our Achievement
+            </h1>
+
           </div>
-        ))}
-      </Slider>
-    </div>
-  </div>
+        </div>
+        <div className="mt-5 mb-20">
+          <Slider ref={slider} {...settings}>
+            {data.map((item, index) => (
+              <div
+                className=" text-black bg-white rounded-xl shadow-lg p-1 flex flex-col justify-between"
+                key={index}
+              >
+                <div className="flex flex-col gap-10 items-center">
+                  <img
+                    src={item.img}
+                    alt="User"
+                    className=" rounded-md object-cover"
+                  />
+
+                </div>
+
+              </div>
+            ))}
+          </Slider>
+        </div>
+      </div>
 
     </>
   );
