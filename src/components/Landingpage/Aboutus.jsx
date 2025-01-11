@@ -7,8 +7,9 @@ const Aboutus = () => {
   return (
     <div className="mt-6">
 
-      <div className=" flex flex-col lg:flex-row bg-[url('assets/img/bgAbout.png')] bg-no-repeat bg-cover justify-between items-center lg:px-32 px-5 py-10 lg:pt-6 gap-5">
-        <div className=" w-full lg:w-3/4 space-y-4 ">
+      <div className=" flex flex-col lg:flex-row  justify-between items-center  gap-5">
+      <div className=" bg-[url('assets/img/bgAbout.png')] bg-no-repeat bg-cover flex flex-col lg:flex-row p-12  gap-5">
+        <div className=" w-full lg:w-3/4 p-4 rounded-xl shadow-lg space-y-4 ">
           <div
             className="bg-cover bg-center p-8 w-64"
             style={{ backgroundImage: `url(${headImage})` }}
@@ -29,6 +30,7 @@ ShardaMohan Clinic comes forward with a holistic approach to treat patients with
         </div>
         <div className=" w-full lg:w-3/4 mb-10">
           <img className=" rounded-lg" src={img} alt="img" />
+        </div>
         </div>
       </div>
     </div>
