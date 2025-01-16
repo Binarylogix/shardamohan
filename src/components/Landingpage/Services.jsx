@@ -54,7 +54,7 @@ const Services = () => {
                         </h1>
                       </div>
             <p className=" mt-2 text-center lg:text-start">
-              Here are six main services that can be highlighted for Sharda Mohan Homeopathy Center:
+              Here are main services that can be highlighted for Sharda Mohan Homeopathy Center:
             </p>
           </div>
           <div className=" mt-4 lg:mt-0">
