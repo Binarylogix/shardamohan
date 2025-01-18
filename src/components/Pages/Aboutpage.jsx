@@ -6,6 +6,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import img from "../../assets/img/about.jpg";
 import drparul from "../../assets/gallery/drparul.jpeg";
+import img1 from "../../assets/certificate/1.jpeg";
+import img2 from "../../assets/certificate/2.jpeg";
+import img3 from "../../assets/certificate/3.jpeg";
+import img4 from "../../assets/certificate/4.jpeg";
+import img5 from "../../assets/certificate/5.jpeg";
 
 
 
@@ -13,19 +18,19 @@ const About = () => {
 
   const data = [
     {
-      img: "/src/assets/certificate/1.jpeg",
+      img: img1,
     },
     {
-      img: "/src/assets/certificate/2.jpeg",
+      img: img2,
     },
     {
-      img: "/src/assets/certificate/3.jpeg",
+      img: img3,
     },
     {
-      img: "/src/assets/certificate/4.jpeg",
+      img: img4,
     },
     {
-      img: "/src/assets/certificate/5.jpeg",
+      img:img5,
     },
 
   ];
