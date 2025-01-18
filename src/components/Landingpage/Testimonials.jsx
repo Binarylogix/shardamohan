@@ -4,46 +4,48 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaStar } from "react-icons/fa";
 import headImage from "../../assets/head.png";
+import gents from "../../assets/img/test3.png";
+import lady from "../../assets/img/test2.png";
 
 
 const Testimonials = () => {
         const data = [
             {
-              img: "/src/assets/img/test3.png",
+              img: gents,
               name: "Anagha Kamat",
               testimonial:
                 "Extremely prompt response to phone call and great service. Thank you Dr Parul.",
               rating: 5,
             },
             {
-              img: "/src/assets/img/test2.png",
+              img: lady,
               name: "Anjali Rai",
               testimonial:
                 "Amazing service, Doctor is very knowledgeable and cures Hair and skin related problems",
               rating: 5,
             },
             {
-              img: "/src/assets/img/test3.png",
+              img: gents,
               name: "pawan kamal",
               testimonial:
                 "Dr. Parul ma'am's treatment is very good and the best thing is that she serves at ma'am's clinic 24 hours a day and explains things with great love.",
               rating: 5,
             },
             {
-              img: "/src/assets/img/test3.png",
+              img: gents,
               name: "Danish Farooqui",
               testimonial:
                 "Hi, Mam you had done a very grateful work for my daughter.  Because of you she had nice hair. I never ever had Dr. U r very careful, understand and helpful towards patients. .",
               rating: 5,
             },
         {
-          img: "/src/assets/img/test2.png",
+          img: lady,
           name: "Avani Verma",
           testimonial: "I tried everything for hair growth but nothing helped me, but after getting consultation from Sharda Mohan I saw hair growth and that too without chemicals.",
           rating: 5,
         },
         {
-          img: "/src/assets/img/test2.png",
+          img: lady,
           name: "ARPITA GHOSH",
           testimonial: "The staff here is exceptional. They went above and beyond to make sure I had a great experience.",
           rating: 5,
