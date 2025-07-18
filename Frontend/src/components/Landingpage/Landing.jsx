@@ -12,6 +12,7 @@ import Contactsection from "./ContactSection";
 import Gallery from "./Gallery";
 import Navbar from "../Main/Navbar";
 import Footer from "../Main/Footer";
+import WhyChooseUs from "./WhyChooseUs";
 const Landing = () => {
 
   return (
@@ -19,6 +20,7 @@ const Landing = () => {
           <Navbar/>
           {/* Home Section */}
           <Home/>
+          <WhyChooseUs />
 
           {/* About Section */}
           <Aboutus/>
