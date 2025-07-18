@@ -16,7 +16,7 @@ import {
   TableProperties,
   Package,
 } from "lucide-react"
-import List from "../pages/LIst";
+import List from "../pages/List";
 
 
 

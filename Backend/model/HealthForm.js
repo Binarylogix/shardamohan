@@ -24,7 +24,7 @@ const healthFormSchema = new mongoose.Schema({
 
   headaches: String,
   immuneSneezing: Boolean,
-  knownAllergies: Boolean,
+  knownAllergies: String,
   allergies: String,
   sickFrequency: String,
   antibiotics: String,

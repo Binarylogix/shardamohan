@@ -101,135 +101,269 @@ const WaterIntakeOptions = ["<1L", "1–2L", ">2L"];
 const SleepOptions = ["<5 hrs", "5–6 hrs", "7–8 hrs", ">8 hrs"];
 const FrequencyOptions = ["Rarely", "Occasionally", "Frequently", "Almost Daily"];
 const StressLevels = ["Low", "Moderate", "High"];
-const DiagnosedConditions = ["Diabetes", "Thyroid Disorder", "PCOS/PCOD", "Hypertension", "Obesity", "Heart Disease", "Other"];
-const CurrentSymptoms = ["Fatigue", "Hair Fall", "Weight Gain", "Mood Swings", "Acne", "Brain Fog", "Bloating", "Constipation", "Joint Pain", "Headaches", "Irregular Periods", "Other"];
-const LifestyleHabits = ["Sedentary lifestyle", "Irregular meals", "Skipping breakfast", "Frequent snacking", "Low water intake", "High screen time", "Stressful work"];
+const DiagnosedConditions = [
+  "Diabetes",
+  "Obesity",
+  "Thyroid disorder",
+  "Hypertension (High BP)",
+  "High Cholesterol",
+  "PCOS / Hormonal Imbalance",
+  "Fatty Liver",
+  "Gout / High uric acid",
+  "Arthritis",
+  "Insulin Resistance",
+  "Migraine",
+  "Kidney Stones",
+  "Recurrent Allergies (skin, food, seasonal, etc.)",
+  "Low Immunity / Frequent Infections",
+];
+
+const CurrentSymptoms = [
+  "Cravings (sugar/salt)",
+  "Tiredness after meals",
+  "Hair thinning / Facial hair",
+  "Mood swings",
+  "Bloating / Gas / Constipation",
+  "Brain fog",
+  "Sleep issues",
+  "Acne / Pigmentation",
+  "Joint pains",
+  "How frequently do you get headaches?",
+
+];
+
+const LifestyleHabits = [
+  "Junk food intake often",
+  "Sugary tea/coffee",
+  "Doing Intermittent Fasting",
+  "Regular physical activity (Yoga / Walk / Gym)",
+  "On long-term medication / antacids",
+  "Bloating issues"
+];
+
 const MenstrualHistory = ["Irregular periods", "Heavy bleeding", "Painful periods", "Missed periods", "Menopause"];
 
 const HealthForm = () => {
   const [formData, setFormData] = useState({});
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const res = await axios.post("/api/healthform/submitHealthForm", formData);
-      if (res.status === 201) {
-        Swal.fire({
-          icon: "success",
-          title: "Form Submitted!",
-          text: "✅ Your form has been submitted successfully.",
-          confirmButtonText: "Done",
-          confirmButtonColor: "#3085d6",
-        });
-        setFormData({});
-      }
-    } catch (error) {
-      const { response } = error;
-      if (response) {
-        const { status, data } = response;
-        Swal.fire({
-          icon: status === 400 ? "warning" : "error",
-          title: status === 400 ? "Validation Error" : "Server Error",
-          text: data.error || "Unexpected error occurred.",
-          confirmButtonColor: status === 400 ? "#f59e0b" : "#d33",
-        });
-      } else {
-        Swal.fire({
-          icon: "error",
-          title: "Unexpected Error",
-          text: error.message,
-        });
-      }
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  try {
+    const res = await axios.post("/api/healthform/submitHealthForm", formData);
+
+    if (res.status === 201) {
+      // Swal.fire({
+      //   icon: "success",
+      //   title: "Form Submitted!",
+      //   text: "✅ Your form has been submitted successfully.",
+      //   confirmButtonText: "Done",
+      //   confirmButtonColor: "#22c55e", // Tailwind green-500
+      // });
+Swal.fire({
+  icon: "success",
+  title: "Form Submitted!",
+  text: "✅ Your form has been submitted successfully.",
+  confirmButtonText: "Done",
+  customClass: {
+    confirmButton: 'bg-green-500 text-white px-6 py-2 rounded hover:bg-green-600',
+  },
+});
+
+      setFormData({});
     }
-  };
+  } catch (error) {
+    const { response } = error;
+
+    if (response) {
+      const { status, data } = response;
+
+      Swal.fire({
+        icon: status === 400 ? "warning" : "error",
+        title: status === 400 ? "Validation Error" : "Server Error",
+        text: data.error || "Unexpected error occurred.",
+        confirmButtonColor: status === 400 ? "#f59e0b" : "#d33", // amber for warning, red for error
+      });
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Unexpected Error",
+        text: error.message,
+        confirmButtonColor: "#d33",
+      });
+    }
+  }
+};
+
 
   return (
     <>
-    <Navbar />
-    <div className="min-h-screen bg-gradient-to-br from-green-50 to-white px-4 py-10 md:pt-28">
-      <div className="max-w-6xl mx-auto bg-white shadow-2xl rounded-2xl p-6 md:p-10 border border-gray-100">
-        <h1 className="text-4xl sm:text-5xl font-extrabold text-center  mb-10 leading-tight">
-          🩺 Metabolic  <span className="text-green-500">Health Evaluation </span>
-        </h1>
-        <form onSubmit={handleSubmit} className="grid gap-6">
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            <TextInput label="Full Name" name="fullName" state={formData} setState={setFormData} />
-            <TextInput label="Age" name="age" type="number" state={formData} setState={setFormData} />
-            <SelectField label="Gender" name="gender" options={["Male", "Female", "Other"]} state={formData} setState={setFormData} />
-            <TextInput label="City" name="city" state={formData} setState={setFormData} />
-            <TextInput label="Phone Number" name="phone" state={formData} setState={setFormData} />
-            <TextInput label="Email ID" name="email" state={formData} setState={setFormData} />
-            <TextInput label="Occupation" name="occupation" state={formData} setState={setFormData} />
-            <TextInput label="Any major surgery or operation in the past? If yes," name="surgery" state={formData} setState={setFormData} />
-          </div>
+      <Navbar />
+      <div className="min-h-screen bg-gradient-to-br from-green-50 to-white px-4 py-10 md:pt-28">
+        <div className="max-w-6xl mx-auto bg-white shadow-2xl rounded-2xl p-6 md:p-10 border border-gray-100">
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-center  mb-10 leading-tight">
+            🩺 Metabolic  <span className="text-green-500">Health Evaluation </span>
+          </h1>
+          <form onSubmit={handleSubmit} className="grid gap-6">
+            <h2 className="text-2xl font-bold text-gray-800 mb-2 mt-6">Basic Information</h2>
 
-          <CheckBoxGroup label="Diagnosed Conditions" name="conditions" options={DiagnosedConditions} state={formData} setState={setFormData} />
-          <CheckBoxGroup label="Current Symptoms" name="symptoms" options={CurrentSymptoms} state={formData} setState={setFormData} />
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <TextInput label="Full Name" name="fullName" state={formData} setState={setFormData} />
+              <TextInput label="Age" name="age" type="number" state={formData} setState={setFormData} />
+              <SelectField label="Gender" name="gender" options={["Male", "Female", "Other"]} state={formData} setState={setFormData} />
+              <TextInput label="City" name="city" state={formData} setState={setFormData} />
+              <TextInput label="Phone Number" name="phone" state={formData} setState={setFormData} />
+              <TextInput label="Email ID" name="email" state={formData} setState={setFormData} />
+              <TextInput label="Occupation" name="occupation" state={formData} setState={setFormData} />
+              <TextInput label="Any major surgery in the past? If yes," name="surgery" state={formData} setState={setFormData} />
+            </div>
+            <h2 className="text-2xl font-bold text-gray-800 mb-2 mt-6"> Hair Fall Details</h2>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <SelectField
+                label="Duration of Hair Fall"
+                name="hairFallDuration"
+                options={["< 3 months", "3–6 months", "> 6 months"]}
+                state={formData}
+                setState={setFormData}
+              />
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-           
-            <BooleanField label="Sneezing, runny nose, itchy eyes?" name="immuneSneezing" state={formData} setState={setFormData} />
-            <BooleanField label="Any known allergies?" name="knownAllergies" state={formData} setState={setFormData} />
+              <SelectField
+                label="Scalp Type"
+                name="scalpType"
+                options={["Dry", "Oily", "Dandruff", "Normal"]}
+                state={formData}
+                setState={setFormData}
+              />
+              <SelectField
+                label="Hair Wash Frequency"
+                name="hairWashFrequency"
+                options={["Daily", "Alternate days", "2x/week"]}
+                state={formData}
+                setState={setFormData}
+              />
+
+              <TextInput
+                label="Current Hair Oil Used"
+                name="hairOil"
+                state={formData}
+                setState={setFormData}
+              />
+              <TextInput
+                label="Related Health Concerns"
+                name="hairHealth"
+                state={formData}
+                setState={setFormData}
+              />
+              <SelectField
+                label="Stress Levels"
+                name="stressLevel"
+                options={StressLevels}
+                state={formData}
+                setState={setFormData}
+              />
+              <BooleanField
+                label="Any supplements for hair fall?"
+                name="hairSupplements"
+                state={formData}
+                setState={setFormData}
+              />
+              <BooleanField
+                label="Use of dye / straightening / heating / chemicals?"
+                name="hairTreatmentUsed"
+                state={formData}
+                setState={setFormData}
+              />
+              <BooleanField
+                label="Family history of hair fall?"
+                name="hairFallFamilyHistory"
+                state={formData}
+                setState={setFormData}
+              />
+            </div>
+
+            <h2 className="text-2xl font-bold text-gray-800 mb-2 mt-6"> Metabolic, Hormonal & Immune Health
+            </h2>
+            <SelectField
+              label="How frequently do you get headaches?"
+              name="headaches"
+              options={FrequencyOptions}
+              state={formData}
+              setState={setFormData}
+            />
+            <CheckBoxGroup label="Diagnosed Conditions" name="conditions" options={DiagnosedConditions} state={formData} setState={setFormData} />
+
+            <CheckBoxGroup label="Current Symptoms" name="symptoms" options={CurrentSymptoms} state={formData} setState={setFormData} />
+
+            <h2 className="text-2xl font-bold text-gray-800 mb-2 mt-6"> Immune-Related</h2>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+
+
+              <TextInput label="If any allergies (Specify)" name="knownAllergies" state={formData} setState={setFormData} />
+
+              {/* <BooleanField label="Any known food or environmental allergies?" name="knownAllergies" state={formData} setState={setFormData} /> */}
+              {/* 
             </div>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-             <SelectField label="Headache Frequency" name="headaches" options={FrequencyOptions} state={formData} setState={setFormData} />
-           
-            <SelectField label="How often do you fall sick?" name="sickFrequency" options={FrequencyOptions} state={formData} setState={setFormData} />
-            <SelectField label="Antibiotics in last 2 years?" name="antibiotics" options={["Yes", "No"]} state={formData} setState={setFormData} />
+              <SelectField label="Headache Frequency" name="headaches" options={FrequencyOptions} state={formData} setState={setFormData} /> */}
 
+              <SelectField label="How often do you fall sick?" name="sickFrequency" options={FrequencyOptions} state={formData} setState={setFormData} />
+              <SelectField label="Antibiotics in last 2 years?" name="antibiotics" options={["Yes", "No"]} state={formData} setState={setFormData} />
+              <BooleanField label="Sneezing, runny nose, itchy eyes?" name="immuneSneezing" state={formData} setState={setFormData} />
             </div>
-             <TextArea label="If yes, specify allergies" name="allergies" state={formData} setState={setFormData} />
+            {/* <TextArea label="If yes, specify allergies" name="allergies" state={formData} setState={setFormData} /> */}
 
 
+            <h2 className="text-2xl font-bold text-gray-800 mb-2 mt-6">Lifestyle Overview</h2>
 
-          <CheckBoxGroup label="Lifestyle Overview" name="lifestyle" options={LifestyleHabits} state={formData} setState={setFormData} />
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-2">
-          <SelectField label="Water Intake" name="waterIntake" options={WaterIntakeOptions} state={formData} setState={setFormData} />
-          <SelectField label="Stress Levels" name="lifestyleStressLevel" options={StressLevels} state={formData} setState={setFormData} />
-          </div>
-          <CheckBoxGroup label="Menstrual History (Females)" name="menstrualHistory" options={MenstrualHistory} state={formData} setState={setFormData} />
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-2">
-            <SelectField label="Average Sleep Duration" name="sleepDuration" options={SleepOptions} state={formData} setState={setFormData} />
-            <SelectField label="Refreshed after waking?" name="refreshed" options={["Yes", "No"]} state={formData} setState={setFormData} />
-          </div>
+            <CheckBoxGroup label="Lifestyle Overview" name="lifestyle" options={LifestyleHabits} state={formData} setState={setFormData} />
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-2">
+              <SelectField label="Water Intake" name="waterIntake" options={WaterIntakeOptions} state={formData} setState={setFormData} />
+              <SelectField label="Stress Levels" name="lifestyleStressLevel" options={StressLevels} state={formData} setState={setFormData} />
+            </div>
+            <CheckBoxGroup label="Menstrual History (Females)" name="menstrualHistory" options={MenstrualHistory} state={formData} setState={setFormData} />
+            <h2 className="text-2xl font-bold text-gray-800 mb-2 mt-6"> Sleep & Stress</h2>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-2">
+              <SelectField label="Average Sleep Duration" name="sleepDuration" options={SleepOptions} state={formData} setState={setFormData} />
+              <SelectField label="Feeling refreshed after waking?" name="refreshed" options={["Yes", "No"]} state={formData} setState={setFormData} />
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            
-            <BooleanField label="Difficulty sleeping?" name="sleepDifficulty" state={formData} setState={setFormData} />
-            <BooleanField label="Screen use at night?" name="screenAtNight" state={formData} setState={setFormData} />
-            <BooleanField label="Snoring / Daytime tiredness?" name="snoringTired" state={formData} setState={setFormData} />
-          </div>
+              <BooleanField label="Difficulty sleeping?" name="sleepDifficulty" state={formData} setState={setFormData} />
+              <BooleanField label="Use of screen use at night?" name="screenAtNight" state={formData} setState={setFormData} />
+              <BooleanField label="Snoring / Daytime tiredness?" name="snoringTired" state={formData} setState={setFormData} />
+            </div>
 
-          <CheckBoxGroup label="Stress-Relief Practices" name="stressRelief" options={["Meditation", "Breathing exercises", "Journaling", "None"]} state={formData} setState={setFormData} />
+            <CheckBoxGroup label="Stress-Relief Practices" name="stressRelief" options={["Meditation", "Breathing exercises", "Journaling", "None"]} state={formData} setState={setFormData} />
+            <h2 className="text-2xl font-bold text-gray-800 mb-2 mt-6"> Lab Reports (If Available)</h2>
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            <TextInput label="Date of Last Report" name="reportDate" type="date" state={formData} setState={setFormData} />
-            <TextInput label="Fasting Blood Sugar" name="fbs" state={formData} setState={setFormData} />
-            <TextInput label="HbA1c" name="hba1c" state={formData} setState={setFormData} />
-            <TextInput label="Fasting Insulin" name="insulin" state={formData} setState={setFormData} />
-            <TextInput label="TSH / T3 / T4" name="thyroid" state={formData} setState={setFormData} />
-            <TextInput label="Triglycerides" name="triglycerides" state={formData} setState={setFormData} />
-            <TextInput label="Uric Acid" name="uricAcid" state={formData} setState={setFormData} />
-            <TextInput label="Vitamin D" name="vitD" state={formData} setState={setFormData} />
-            <TextInput label="Vitamin B12" name="vitB12" state={formData} setState={setFormData} />
-            <TextInput label="Hemoglobin (Hb)" name="hemoglobin" state={formData} setState={setFormData} />
-            <TextInput label="Blood Pressure (BP)" name="bp" state={formData} setState={setFormData} />
-          </div>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <TextInput label="Date of Last Report" name="reportDate" type="date" state={formData} setState={setFormData} />
+              <TextInput label="Fasting Blood Sugar" name="fbs" state={formData} setState={setFormData} />
+              <TextInput label="HbA1c" name="hba1c" state={formData} setState={setFormData} />
+              <TextInput label="Fasting Insulin" name="insulin" state={formData} setState={setFormData} />
+              <TextInput label="TSH / T3 / T4" name="thyroid" state={formData} setState={setFormData} />
+              <TextInput label="Triglycerides" name="triglycerides" state={formData} setState={setFormData} />
+              <TextInput label="Uric Acid" name="uricAcid" state={formData} setState={setFormData} />
+              <TextInput label="Vitamin D" name="vitD" state={formData} setState={setFormData} />
+              <TextInput label="Vitamin B12" name="vitB12" state={formData} setState={setFormData} />
+              <TextInput label="Hemoglobin (Hb)" name="hemoglobin" state={formData} setState={setFormData} />
+              <TextInput label="Blood Pressure (BP)" name="bp" state={formData} setState={setFormData} />
+            </div>
 
-          <TextArea label="Any Other Concerns / Symptoms" name="otherConcerns" state={formData} setState={setFormData} />
+            <TextArea label="Any Other Concerns / Symptoms" name="otherConcerns" state={formData} setState={setFormData} />
 
-          <div className="text-left">
-            <button
-              type="submit"
-              className="bg-gradient-to-r from-green-600 to-green-800 text-white font-semibold text-lg px-8 py-3 rounded-full shadow-lg hover:scale-105 transform transition duration-300 ease-in-out"
-            >
-              🚀 Submit Form
-            </button>
-          </div>
-        </form>
+            <div className="text-left">
+              <button
+                type="submit"
+                className="bg-gradient-to-r from-green-600 to-green-800 text-white font-semibold text-lg px-8 py-3 rounded-full shadow-lg hover:scale-105 transform transition duration-300 ease-in-out"
+              >
+                🚀 Submit Form
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
-    <Footer />
+      <Footer />
     </>
   );
 };
