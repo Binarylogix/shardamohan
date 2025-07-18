@@ -13,12 +13,16 @@ import Testimonialspage from "./components/Pages/TestimonialsPage";
 import Contactus from "./components/Landingpage/Contactus";
 import BlogsDetails from "./components/Pages/BlogDetails";
 import Gallery from "./components/Pages/Gallery";
+import ContactForm from "./models/ContactUs";
+import ComprehensiveHealthForm from "./models/ContactUs";
+import HealthForm from "./models/ContactUs";
+import { Sidebar } from "./admin/component/Sidebar";
 
 const App = () => {
   return (
     <Router>
-      <Navbar />
       <main>
+      <Navbar />
         <Routes>
           <Route path="/" element={<Home />} /> {/* Home page */}
           <Route path="/about" element={<About />} /> {/* About page */}
@@ -27,10 +31,13 @@ const App = () => {
           <Route path="/blogs" element={<Blogs />} /> {/* Blogs page */}
           <Route path="/blogdetails/:id" element={<BlogsDetails />} /> {/* Blog details page */}
           <Route path="/testimonials" element={<Testimonialspage />} /> {/* Testimonials page */}
-          <Route path="/contact" element={<Contactus />} /> {/* Contact page */}
+          <Route path="/contact" element={<HealthForm />} /> {/* Contact page */}
         </Routes>
-      </main>
       <Footer />
+      </main>
+      <Routes>
+          <Route path="/admin/ShardaMohanHomoeopathicClinic/dashboard" element={<Sidebar />} /> {/* Contact page */}
+        </Routes>
     </Router>
   );
 };
