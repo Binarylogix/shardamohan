@@ -8,6 +8,8 @@ import img3 from "../../assets/img/warts.png";
 import img4 from "../../assets/img/piles.png";
 import img5 from "../../assets/img/gastric.png";
 import img6 from "../../assets/img/child.png";
+import Navbar from "../Main/Navbar";
+import Footer from "../Main/Footer";
 
 const Services = () => {
     //Services section Icons
@@ -37,6 +39,7 @@ const Services = () => {
       
   return (
     <>
+    <Navbar />
       <Banner tital="Service" />
       <div className="flex flex-col justify-center lg:px-24 px-5 pt-6 lg:pt-6">
         {/* Header Section */}
@@ -88,6 +91,8 @@ Women's diseases include menstrual disorders, polycystic ovary syndrome (PCOS), 
           />
         </div>
       </div>
+
+      <Footer />
     </>
   );
 };

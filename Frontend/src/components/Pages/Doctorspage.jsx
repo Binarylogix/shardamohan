@@ -5,6 +5,8 @@ import "slick-carousel/slick/slick-theme.css";
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 import Banner from "./Banner";
+import Navbar from "../Main/Navbar";
+import Footer from "../Main/Footer";
 
 const Doctors = () => {
   const data = [
@@ -82,6 +84,7 @@ const Doctors = () => {
 
   return (
     <>
+    <Navbar />
     <Banner tital="Doctor" />
     <div className="flex flex-col justify-center lg:px-32 px-5 pt-16">
       <div className="mt-20 flex flex-col items-center lg:flex-row justify-between lg:mb-0">
@@ -133,6 +136,7 @@ const Doctors = () => {
         </Slider>
       </div>
     </div>
+    <Footer />
     </>
   );
 };

@@ -14,6 +14,8 @@ import img12 from "../../assets/gallery/6.jpeg";
 import img13 from "../../assets/gallery/7.jpeg";
 import img15 from "../../assets/gallery/9.jpeg";
 import img16 from "../../assets/gallery/10.jpeg";
+import Navbar from "../Main/Navbar";
+import Footer from "../Main/Footer";
 
 
 
@@ -22,6 +24,7 @@ const images = [img1, img2, img3, img4, img6, img7, img8, img11, img9, img12, im
 const Gallery = () => {
   return (
     <>
+    <Navbar />
      <Banner tital="Galley" />
      <div className="flex flex-col lg:flex-row justify-between items-center lg:px-32 px-5 pt-16 lg:pt-16 gap-5" />
     <div className="px-10 pb-10">
@@ -42,7 +45,9 @@ const Gallery = () => {
           </div>
         ))}
       </div>
-    </div></>
+    </div>
+    <Footer />
+    </>
   );
 };
 

@@ -10,11 +10,13 @@ import Home from "./Home";
 import Display from "./Display";
 import Contactsection from "./ContactSection";
 import Gallery from "./Gallery";
+import Navbar from "../Main/Navbar";
+import Footer from "../Main/Footer";
 const Landing = () => {
 
   return (
     <>
-          
+          <Navbar/>
           {/* Home Section */}
           <Home/>
 
@@ -43,7 +45,8 @@ const Landing = () => {
 
           {/* Contact Section */}
           <Contactsection/>
-
+          
+          <Footer/>
 
           
   </>

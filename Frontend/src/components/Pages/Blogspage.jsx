@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import blogsData from "./BlogData";
 import Banner from "./Banner";
 import Button from "../../layouts/Button";
+import Navbar from "../Main/Navbar";
+import Footer from "../Main/Footer";
 
 const Blogs = () => {
   const navigate = useNavigate();
@@ -15,6 +17,7 @@ const Blogs = () => {
   };
   return (
     <>
+      <Navbar />
       <Banner tital="Blog"/>
       <div className="flex flex-col justify-center lg:px-24 px-5 pt-10">
         <div className="mt-4 flex flex-col items-center lg:flex-row justify-between">
@@ -52,6 +55,7 @@ const Blogs = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

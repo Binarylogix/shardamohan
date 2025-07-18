@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import blogsData from "./BlogData";
+import Navbar from "../Main/Navbar";
+import Footer from "../Main/Footer";
 
 const BlogDetail = () => {
   const { id } = useParams();
@@ -34,6 +36,8 @@ const BlogDetail = () => {
   }
 
   return (
+<>
+    <Navbar />
     <div className="p-6 max-w-4xl mx-auto">
       <h1 className="text-3xl font-bold mb-4">{blog.headline}</h1>
       <img
@@ -49,6 +53,9 @@ const BlogDetail = () => {
         Back to Blogs
       </button>
     </div>
+    <Footer />
+
+    </>
   );
 };
 

@@ -11,7 +11,7 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const openForm = () => {
-    navigate('/contact'); // Redirects to the "contact-us" page
+    navigate('/HealthForm'); // Redirects to the "contact-us" page
   };
 
   const [menu, setMenu] = useState(false);
@@ -87,8 +87,8 @@ const Navbar = () => {
             <Link to="/blogs" className="hover:text-black transition-all cursor-pointer text-black">
               Blog
             </Link>
-            <Link to="/testimonials" className="hover:text-black mr-4 transition-all cursor-pointer text-black">
-              Testimonials
+            <Link to="/contactus" className="hover:text-black mr-4 transition-all cursor-pointer text-black">
+              Conatct Us
             </Link>
           </nav>
 
@@ -97,7 +97,7 @@ const Navbar = () => {
               className="bg-gradient-to-r from-brightColor to-backgroundColor text-white px-4 py-1 rounded-md hover:bg-hoverColor transition duration-300 ease-in-out"
               onClick={openForm}
             >
-              Contact Us
+              Fill Form
             </button>
           </div>
 
@@ -154,13 +154,19 @@ const Navbar = () => {
           >
             Blog
           </Link>
-
+          <Link
+            to="/conactus"
+            className="hover:text-hoverColor transition-all cursor-pointer"
+            onClick={closeMenu}
+          >
+            Contact Us
+          </Link>
           <div className="lg:hidden">
             <button
               className="bg-brightColor text-white px-4 py-2 rounded-md hover:bg-hoverColor transition duration-300 ease-in-out"
               onClick={openForm}
             >
-              Contact Us
+              Fill Form
             </button>
           </div>
         </div>

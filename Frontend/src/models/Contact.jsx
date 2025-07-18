@@ -1,8 +1,12 @@
 import React from "react";
 import Button from "../layouts/Button";
+import Navbar from "../components/Main/Navbar";
+import Footer from "../components/Main/Footer";
 
 const Contact = ({ closeForm }) => {
   return (
+    <>
+    <Navbar />
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
       <div className="popup-form absolute mt-12 text-black">
         <form className=" w-80 md:w-96 space-y-5 bg-white p-5 rounded-xl">
@@ -57,6 +61,8 @@ const Contact = ({ closeForm }) => {
         </form>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 

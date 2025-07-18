@@ -4,6 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaStar } from "react-icons/fa";
 import Banner from "./Banner";
+import Navbar from "../Main/Navbar";
+import Footer from "../Main/Footer";
 
 
 const Testimonials = () => {
@@ -92,6 +94,7 @@ responsive: [
 };
   return (
     <>
+    <Navbar />
      <Banner tital="Testimonial" />
     <div className="flex flex-col justify-center lg:px-32 px-5 pt-16 bg-white">
     <div className="flex flex-col items-center lg:flex-row justify-between mb-10 lg:mb-0 mt-20">
@@ -140,6 +143,7 @@ responsive: [
       </Slider>
     </div>
   </div>
+  <Footer />
   </>
 );
 };

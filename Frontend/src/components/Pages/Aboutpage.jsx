@@ -11,6 +11,8 @@ import img2 from "../../assets/certificate/2.jpeg";
 import img3 from "../../assets/certificate/3.jpeg";
 import img4 from "../../assets/certificate/4.jpeg";
 import img5 from "../../assets/certificate/5.jpeg";
+import Navbar from '../Main/Navbar';
+import Footer from '../Main/Footer';
 
 
 
@@ -79,6 +81,7 @@ const About = () => {
 
   return (
     <>
+    <Navbar/>
       <Banner tital="About" />
       <div className=" justify-between items-center lg:px-24 px-5 pt-16 lg:pt-10 gap-5">
         <div className="mt-20 gap-20 flex flex-col lg:flex-row ">
@@ -190,6 +193,8 @@ const About = () => {
           </Slider>
         </div>
       </div>
+
+      <Footer />
 
     </>
   );
