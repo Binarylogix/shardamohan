@@ -12,23 +12,23 @@ const Testimonials = () => {
   const data = [
     {
       img: gents,
-      name: "Anagha Kamat",
+      name: "Khushi",
       testimonial:
-        "Extremely prompt response to phone call and great service. Thank you Dr Parul.",
+        "I was facing PCOD and hair fall issues. After following Parul Ma'am's diet and exercise plan, I noticed a regular period within a week! Her constant follow-up and guidance really helped. Thanks to Sharda Mohan Homeopathy for effective and affordable treatment.",
       rating: 5,
     },
     {
       img: lady,
-      name: "Anjali Rai",
+      name: "Anjali ",
       testimonial:
         "Amazing service, Doctor is very knowledgeable and cures Hair and skin related problems",
       rating: 5,
     },
     {
       img: gents,
-      name: "pawan kamal",
+      name: "Asmi (Dehli)",
       testimonial:
-        "Dr. Parul ma'am's treatment is very good and the best thing is that she serves at ma'am's clinic 24 hours a day and explains things with great love.",
+        "In just 45 days of following your diet plan and homeopathy, I saw major improvement in my PCOD, hair fall, thyroid, and vitamin deficiencies. Your holistic and caring approach truly helped me feel healthier and balanced. Thank you!",
       rating: 5,
     },
     {
@@ -114,7 +114,7 @@ const Testimonials = () => {
         <Slider ref={slider} {...settings}>
           {data.map((item, index) => (
             <div
-              className="h-[370px] md:h-[350px] text-black bg-white rounded-xl shadow-lg p-5 flex flex-col justify-between mb-2"
+              className="h-[390px] md:h-[370px] text-black bg-white rounded-xl shadow-lg p-5 flex flex-col justify-between mb-2"
               key={index}
             >
               <div className="flex flex-col items-center">

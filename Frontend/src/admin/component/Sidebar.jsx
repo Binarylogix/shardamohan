@@ -85,12 +85,8 @@ export function Sidebar() {
         {/* Sidebar Navigation */}
         <div className="flex-1 overflow-y-auto py-2">
           <div className="px-3 mt-4">
-            {/* {!collapsed && (
-              <div className="mb-2 px-4 py-2 text-xs font-semibold uppercase text-gray-500">Navigation</div>
-            )} */}
             <nav className="space-y-1">
               {[
-
                 {
                   label: "List",
                   icon: ListPlus,

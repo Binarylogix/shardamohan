@@ -21,8 +21,6 @@ import { Sidebar } from "./admin/component/Sidebar";
 const App = () => {
   return (
     <Router>
-     
-     
         <Routes>
           <Route path="/" element={<Home />} /> {/* Home page */}
           <Route path="/about" element={<About />} /> {/* About page */}
@@ -34,9 +32,7 @@ const App = () => {
           <Route path="/contactus" element={<Contactus />} /> {/* Contact page */}
           <Route path="/HealthForm" element={<HealthForm />} /> {/* Contact page */}
           <Route path="/admin/ShardaMohanHomoeopathicClinic/dashboard" element={<Sidebar />} /> {/* Contact page */}
-        </Routes>
-     
-       
+        </Routes> 
     </Router>
   );
 };

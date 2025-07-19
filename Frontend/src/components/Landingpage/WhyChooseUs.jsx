@@ -16,7 +16,7 @@ const WhyChooseUs = () => {
                     </h1>
                 </div>
                 <p className=" md:text-lg text-justify md:text-center text-gray-700 mb-10 mt-5">
-                    No  medicine — Allopathy, Homoeopathy, or Ayurveda — can truly heal without addressing your diet, lifestyle, and stress.
+                    No  medicine — Allopathy, Homoeopathy, or Ayurveda — can <strong>Completly heal</strong> without addressing your diet, lifestyle, and stress.
                     That’s why at <strong>Sharda Mohan Homoeopathic Clinic</strong> we focus on a Root‑Cause‑Based Lifestyle & Wellness Assessment — because real healing starts from within.
                 </p>
 
@@ -35,7 +35,7 @@ const WhyChooseUs = () => {
 
                     <div className="bg-green-50 p-6 rounded-2xl shadow-sm">
                         <CheckCircle className="text-green-500 mb-2" />
-                        <h3 className="font-semibold md:text-lg">Certified Metabolic Health Coaching</h3>
+                        <h3 className="font-semibold md:text-lg">Certified Metabolic Health Coach</h3>
                     </div>
 
                     <div className="bg-green-50 p-6 rounded-2xl shadow-sm">
@@ -52,9 +52,10 @@ const WhyChooseUs = () => {
                 </div>
 
                 <div className="mt-10 text-center text-gray-600">
-                    <p className="text-red-500 text-lg md:text-xl"><span className="text-black font-bold">
-                        Note from Dr Parul Agrawal : </span>
-                        If you're struggling with issues like weight gain, PCOS, thyroid imbalance, sleep disturbances, hair fall, diabetes, or constant fatigue — it's time to stop masking symptoms and address the root cause.
+                     <h1 className="text-black text-lg font-bold">
+                        Note from Dr Parul Agrawal : </h1>
+                    <p className="text-red-500 text-lg md:text-xl pt-1">
+                        If you're struggling with issues like Obesity, Diabetes, Hyper Tension, PCOS, thyroid imbalance, sleep disturbances, hair fall, diabetes, or constant fatigue — it's time to stop masking symptoms and address the root cause.
                     </p>
                     <button class="mt-6 py-3 px-6 bg-gradient-to-r from-black via-green-500 to-green-800 text-white font-extrabold text-md rounded-2xl shadow-xl border-2 border-white animate-bounce hover:scale-110 hover:shadow-2xl transition-all duration-500 hover:ring-4 hover:ring-pink-300">
                         ✨ Fill the Form Now ✨
