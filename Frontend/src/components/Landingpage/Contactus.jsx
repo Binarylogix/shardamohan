@@ -15,7 +15,7 @@ const Contactus = () => {
       <Navbar />
       <Banner tital="Contact US" />
 
-      <div className="flex flex-wrap p-6 md:p-20 items-center shadow-lg  rounded-lg justify-center">
+      <div className="flex flex-wrap p-6 md:p-20  items-center shadow-lg  rounded-lg justify-center">
         <div className="flex flex-col md:flex-row  gap-10 p-6 shadow-lg rounded-lg w-full">
           {/* Address Section */}
           <div className="flex-1 w-full p-4 md:p-8 bg-cover bg-center shadow-lg rounded-lg " style={{ backgroundImage: `url(${img1})` }}>

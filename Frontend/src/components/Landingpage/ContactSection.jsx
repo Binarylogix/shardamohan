@@ -8,7 +8,7 @@ import img1 from "../../assets/img/bac.png";
 
 const ContactSection = () => {
   return (
-    <div className="flex flex-wrap p-6 md:p-20 items-center shadow-lg  rounded-lg justify-center">
+    <div className="flex flex-wrap p-1 md:p-20 items-center shadow-lg  rounded-lg justify-center">
       <div className="flex flex-col md:flex-row  rounded-tl-lg rounded-tr-lg w-full">
         {/* Map Section */}
         <div className="flex-1 w-full">

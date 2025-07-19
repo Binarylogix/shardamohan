@@ -8,19 +8,19 @@ import { MdOutlineCurrencyExchange } from "react-icons/md";
 
 const Display = () => {
   return (
-    <div className="relative flex flex-col justify-center items-center w-full min-h-screen bg-[url('assets/img/display.jpg')] bg-no-repeat bg-cover bg-center">
+    <div className="relative flex flex-col justify-center lg:px-24 items-center w-full min-h-screen bg-[url('assets/img/display.jpg')] bg-no-repeat bg-cover bg-center">
       {/* Overlay */}
       <div className="absolute inset-0 bg-black opacity-60"></div>
 
       {/* Content */}
-      <div className="relative z-10 text-center text-white space-y-6 px-4 mt-8">
+      <div className="relative z-10 text-center text-white space-y-6 px-4 mt-8 md:mt-0">
         <h2 className="text-3xl md:text-5xl font-bold">
           Why choose Homoeopathy?
         </h2>
         <p className="text-lg md:text-xl mb-4">
           Natural remedies for chronic diseases.
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 px-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6  md:px-4">
           {/* Natural Remedies */}
           <div className="flex flex-col items-center bg-green-200 p-6 rounded-xl text-black">
             <GiThreeLeaves size={40} />

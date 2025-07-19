@@ -15,7 +15,7 @@ const CheckBoxGroup = ({ label, options, name, state, setState }) => {
   };
 
   return (
-    <div className="mb-6">
+    <div className="mb-6 ">
       <p className="font-semibold mb-2 text-gray-700">{label}</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {options.map((opt) => (
@@ -199,7 +199,7 @@ Swal.fire({
   return (
     <>
       <Navbar />
-      <div className="min-h-screen bg-gradient-to-br from-green-50 to-white px-4 py-10 md:pt-28">
+      <div className="min-h-screen bg-gradient-to-br from-green-50 to-white px-4 py-10  pt-28">
         <div className="max-w-6xl mx-auto bg-white shadow-2xl rounded-2xl p-6 md:p-10 border border-gray-100">
           <h1 className="text-4xl sm:text-5xl font-extrabold text-center  mb-10 leading-tight">
             🩺 Metabolic  <span className="text-green-500">Health Evaluation </span>

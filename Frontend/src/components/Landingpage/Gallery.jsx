@@ -5,20 +5,20 @@ import img3 from "../../assets/hair.jpg";
 import img4 from "../../assets/gallery/5.jpeg";
 import img5 from "../../assets/health.jpg";
 import img6 from "../../assets/ho.jpg";
-import headImage from '../../assets/head.png'; 
+import headImage from '../../assets/head.png';
 
 const Gallery = () => {
   return (
     <>
-      <div className="items-center px-4 pt-16 lg:px-28 lg:pt-6">
+      <div className="items-center px-4 pt-6 md:pt-16 lg:px-28 lg:pt-6">
         <div
-                   className="bg-cover bg-center p-8 w-64"
-                   style={{ backgroundImage: `url(${headImage})` }}
-                 >
-                   <h1 className="text-4xl font-semibold text-center lg:text-start ">
-                    Gallery
-                   </h1>
-                 </div>
+          className="bg-cover bg-center p-4 md:p-8 md:w-64"
+          style={{ backgroundImage: `url(${headImage})` }}
+        >
+          <h1 className="text-4xl font-semibold text-center lg:text-start ">
+            Gallery
+          </h1>
+        </div>
         <p className="mb-8 mt-2 text-center lg:text-start text-gray-500">
           Hear what our clients have to say about their experiences with us.
         </p>

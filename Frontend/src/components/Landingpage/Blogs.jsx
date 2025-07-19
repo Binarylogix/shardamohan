@@ -16,11 +16,11 @@ const Blogs = () => {
   return (
     <>
 
-      <div className="flex flex-col justify-center lg:px-32 px-5 pt-24">
+      <div className="flex flex-col justify-center lg:px-32 px-5 pt-4 md:pt-24">
         <div className="mt-10 flex flex-col items-center lg:flex-row justify-between">
           <div>
             <div
-              className="bg-cover bg-center p-8 w-80"
+              className="bg-cover bg-center p-4 md:p-8 md:w-80"
               style={{ backgroundImage: `url(${headImage})` }}
             >
               <h1 className="text-4xl font-semibold text-center lg:text-start ">
@@ -38,12 +38,13 @@ const Blogs = () => {
         <div className="my-8 mb-20">
           <div className="gap-5 md:gap-10 width-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
             {blogsData.map((blog) => (
-              <div key={blog.id} className="bg-white shadow-lg rounded-lg p-6">
+              <div key={blog.id} className="bg-white shadow-lg rounded-lg ">
                 <img
                   src={blog.img}
                   alt={blog.headline}
                   className="w-full h-40 object-cover rounded-t-lg"
                 />
+                <div className="px-4 pb-4">
                 <h2 className="text-xl font-bold mt-4">{blog.headline}</h2>
                 <p className="text-gray-600 mt-2">     {truncateText(blog.description, 16)}</p>
                 <button
@@ -52,6 +53,7 @@ const Blogs = () => {
                 >
                   Read More
                 </button>
+                </div>
               </div>
             ))}
           </div>

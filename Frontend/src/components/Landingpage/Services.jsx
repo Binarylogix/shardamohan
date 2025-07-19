@@ -23,7 +23,7 @@ const Services = () => {
   const icon2 = (
     <img src={img2} alt="skincare" />
   );
-    
+
   const icon3 = (
     <img src={img3} alt="warts" />
   );
@@ -39,32 +39,32 @@ const Services = () => {
   const icon6 = (
     <img src={img6} alt="Sore throat" />
   );
-  
+
   return (
     <div>
       <div className="  flex flex-col justify-center lg:px-32 px-5 pt-16 lg:pt-18">
         <div className=" flex flex-col items-center lg:flex-row justify-between">
           <div>
-             <div
-                        className="bg-cover bg-center p-8 w-96"
-                        style={{ backgroundImage: `url(${headImage})` }}
-                      >
-                        <h1 className="text-4xl font-semibold text-center lg:text-start ">
-                          Our Treatments
-                        </h1>
-                      </div>
-            <p className=" mt-2 text-center lg:text-start">
+            <div
+              className="bg-cover bg-center p-8 md:w-96"
+              style={{ backgroundImage: `url(${headImage})` }}
+            >
+              <h1 className="text-2xl md:text-4xl font-semibold text-center lg:text-start ">
+                Our Treatments
+              </h1>
+            </div>
+            <p className="mt-2 text-center lg:text-start p-2">
               Here are main services that can be highlighted for Sharda Mohan Homeopathy Center:
             </p>
           </div>
           <div className=" mt-4 lg:mt-0">
-          <Link to="/services">
-            <Button title="See Services" />
-          </Link>
-            
+            <Link to="/services">
+              <Button title="See Services" />
+            </Link>
+
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 pt-14 mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 pt-4 md:pt-14 mb-20">
           <ServicesCard
             icon={icon1}
             title="Women's Diseases"
@@ -98,7 +98,7 @@ Women's diseases include menstrual disorders, polycystic ovary syndrome (PCOS), 
           />
         </div>
       </div>
-      <div className="w-full flex justify-center mb-10">  
+      <div className="w-full flex justify-center mb-10">
         <img src={metabolic} alt="Metabolic Diseases" />
       </div>
     </div>
