@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import Navbar from "../components/Main/Navbar";
 import Footer from "../components/Main/Footer";
@@ -195,6 +195,9 @@ Swal.fire({
   }
 };
 
+useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
 
   return (
     <>
